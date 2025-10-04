@@ -1,8 +1,6 @@
-# Use official Node 16 Alpine base image
-FROM node:16-alpine
+FROM node:16
 
-# Install Docker CLI (run docker build/push inside the agent)
-RUN apk add --no-cache docker-cli
-
-# Set work directory for builds
-WORKDIR /app
+# Install Docker CLI inside the Node 16 agent
+RUN apt-get update && \
+    apt-get install -y docker.io && \
+    rm -rf /var/lib/apt/lists/*
