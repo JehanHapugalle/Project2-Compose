@@ -1,6 +1,0 @@
-FROM node:16
-
-# Install Docker CLI inside the Node 16 agent
-RUN apt-get update && \
-    apt-get install -y docker.io && \
-    rm -rf /var/lib/apt/lists/*

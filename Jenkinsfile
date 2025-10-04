@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker { 
-            image 'jehansnh/node16-docker' }
+            image 'node:16-alpine' }
     }
 
     environment {
